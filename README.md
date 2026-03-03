@@ -4,6 +4,9 @@ A notebookban egy Agentic RAG alapú megoldást implementáltam, amely egy adott
 
 A megoldás lokális GPU-t feltételez, az LLM-et az Ollama könytárral futtatja. A reprodukálhatóság érdekében az LLM temperature értéket 0-ra állítottam. A kód Google Colab notebook-ban lett tesztelve. 
 
+### Agent gráfja:
+![Agent_graph](graph.png)
+
 ### Notebook felépítése:
 
 1.   **Setup:** könyvtárak, dependenciák letöltése, Ollama indítása a lokális LLM-futtatáshoz.
@@ -37,3 +40,4 @@ A megoldás lokális GPU-t feltételez, az LLM-et az Ollama könytárral futtatj
 * Structured Outputs használata a válasz string-jében megjelenő "igen" vagy "nem" szavak keresése helyett.
 * Feladat komplexitása alapján szét lehetne osztani a feladatokat: a könnyebb task-okat egy kisebb modell végezné.
 * A válasz újragenerálásakor (regenerate_answer) új kontextust is meg lehetne adni, hiszen lehet a rossz korábbi kontextus okozta a rossz választ. Ezt az új kontextust egy (LLM-mel) újrafogalmazott query-vel lehetne kinyerni. 
+
